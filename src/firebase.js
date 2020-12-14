@@ -5,7 +5,7 @@ import "firebase/firestore";
 const provider = new firebase.auth.GoogleAuthProvider();
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC1f_pFsjEMdMfGJDUqmy8ueZRlbvoXXs8",
+  apiKey: "AIzaSyC_aAwqCnjJkhJ2OrdHouA7eTHvdOT8IH4",
   authDomain: "gymsendr.firebaseapp.com",
   databaseURL: "https://gymsendr.firebaseio.com",
   projectId: "gymsendr",
