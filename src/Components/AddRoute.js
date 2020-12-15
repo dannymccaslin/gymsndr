@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { climbGrades, boulderGrades} from '../DataFiles/climbgrades';
+import { saveFiles} from '../firebase';
 
 
 const climbTypes = ['toprope','sport','boulder'];
@@ -38,6 +39,8 @@ const AddRoute = ({location}) => {
             body: JSON.stringify(formState),
         });
         const json = await response.json();
+        const routeId = json.routeId;
+        saveFiles(fileList, routeId);
         console.log(json);
         // .then(function(response) {
         //     newRouteId = response;
