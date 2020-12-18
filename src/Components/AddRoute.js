@@ -53,10 +53,14 @@ const AddRoute = ({location}) => {
 
     const fileAddHandler = event => {
         const files = event.target.files;
+        console.log(files);
         for (let i = 0; i < files.length; i++) {
-            fileList.push(`images[${i}]`, files[i]);
+            fileList.push(files[i]);
         }
-        formState.files = fileList;
+        console.log(fileList);
+        // for (let i = 0; i < fileList.length; i++) {
+        //     console.log(`name: ${fileList[i].name}, size: ${fileList[i].size}, type: ${fileList[i].type}`)
+        // }
     }
     const changeClimbType = (e) => {
         setClimbType(e.target.value);

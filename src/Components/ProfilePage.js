@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { UserContext } from "../providers/UserProvider";
 import { auth } from "../firebase";
+import { Link } from "@reach/router";
 
 const ProfilePage = () => {
   const user = useContext(UserContext);
   const { photoURL, displayName, email } = user;
+  console.log(user);
 
   return (
     <div className="mx-auto w-11/12 md:w-2/4 py-8 px-4 md:px-8">
@@ -34,6 +36,9 @@ const ProfilePage = () => {
       >
         Sign out
       </button>
+      <Link to="/">
+        Go Home
+      </Link>
     </div>
   );
 };
