@@ -9,6 +9,7 @@ import TopMenu from './Components/TopMenu';
 import { Router } from "@reach/router";
 
 
+
 function App() {
   const user = useContext(UserContext);
   
@@ -21,7 +22,7 @@ function App() {
         <Route path='route' />
         <AddRoute path='addroute' />
         <Gyms path="/"/>
-        <Application path="signin" />
+        <Application path="auth/*" />
         
       </Router>
     </UserProvider>

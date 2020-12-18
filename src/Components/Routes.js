@@ -41,12 +41,15 @@ const Routes = ({ location }) => {
                 )
             })}
             <br />
+            { user && user.isSetter && user.setterGyms.includes(gymId) ? 
             <Link
                 to="../addroute"
                 state={{gymId: {gymId}, gymName: {gymName}}}
                 >
                     Add a New Route at this gym
                 </Link>
+                : <div/>
+            }
         </div>
     )
 }

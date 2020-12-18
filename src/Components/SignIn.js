@@ -81,7 +81,7 @@ const SignIn = () => {
           </Link>{" "}
           <br />{" "}
           <Link
-            to="passwordReset"
+            to="../passwordReset"
             className="text-blue-500 hover:text-blue-600"
           >
             Forgot Password?

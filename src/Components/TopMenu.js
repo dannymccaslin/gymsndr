@@ -10,7 +10,7 @@ const TopMenu = () => {
         <div>
             <h3>gymsendr</h3>
             <Link  
-            to="signin"
+            to="auth"
             >{ user ? `Hello ${user.displayName}` : "Sign In/Sign Up"}
             </Link>
           </div>
