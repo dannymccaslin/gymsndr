@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Link } from '@reach/router';
 import { UserContext } from "../providers/UserProvider";
+import Grade from './Grade';
 
 const Routes = ({ location }) => {
     const user = useContext(UserContext);
@@ -35,7 +36,8 @@ const Routes = ({ location }) => {
                     <Link 
                         to="../route"
                         state={{id: route.id, gymName: {gymName}}}
-                        >{route.name}, {route.grade}</Link>
+                        >{route.name}</Link>
+                        <Grade gradeNumber={route.grade} />
                         <br />
                     </div>
                 )
